@@ -1,3 +1,3 @@
 export const getBaseUrl=()=>{
-    return "https://gc-backend-zyr3.onrender.com/"
+    return "https://gc-backend-zyr3.onrender.com"
 }
