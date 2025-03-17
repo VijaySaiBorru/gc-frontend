@@ -24,7 +24,7 @@ import UpdateProduct from "../pages/dashboard/admin/manageProduct/UpdateProduct"
 import ManageUser from "../pages/dashboard/admin/users/ManageUser";
 import ManageOrders from "../pages/dashboard/admin/manageOrders/ManageOrders";
 import TeamPage from "../pages/team/TeamPage";
-import AdminProfile from "../pages/dashboard/admin/profile/adminProfile";
+import AdminProfile from "../pages/dashboard/admin/profile/AdminProfile";
 import Sellers from "../pages/sellers/Sellers";
 import SellerPage from "../pages/sellers/SellerPage";
 
