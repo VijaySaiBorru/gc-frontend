@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useSelector,useNavigate } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useFetchProductByIdQuery } from '../../../redux/features/products/productsApi';
 import { usePostReviewMutation } from '../../../redux/features/reviews/reviewsApi';
@@ -7,6 +7,7 @@ import { usePostReviewMutation } from '../../../redux/features/reviews/reviewsAp
 const PostAReview = ({isModalOpen,handleCloseReviewModal}) => {
     const {id} = useParams();
     const {user}=useSelector((state)=>state.auth);
+    const navigate=useNavigate();
     const [rating,setRating]= useState(0);
     const [comment,setComment]= useState('');
     const {refetch}=useFetchProductByIdQuery(id,{skip:!id});
@@ -15,6 +16,11 @@ const PostAReview = ({isModalOpen,handleCloseReviewModal}) => {
         setRating(star);
     }
     const handleSubmit=async(e)=>{
+        if(!user){
+            alert("To Post Review You Must Be Logged In");
+            navigate('/login');
+            return;
+        }
         e.preventDefault();
         const newComment ={
             comment:comment,
