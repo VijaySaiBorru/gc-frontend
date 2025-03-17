@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useSelector,useNavigate } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useParams,useNavigate } from 'react-router-dom';
 import { useFetchProductByIdQuery } from '../../../redux/features/products/productsApi';
 import { usePostReviewMutation } from '../../../redux/features/reviews/reviewsApi';
 
