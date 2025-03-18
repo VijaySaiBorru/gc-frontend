@@ -79,7 +79,7 @@ const AddProduct = () => {
                 <TextInput
                     label="Product Name"
                     name="name"
-                    placeholder="Ex: Diamond Earrings"
+                    placeholder="Ex: Bingo Yumitos"
                     value={product.name}
                     onChange={handleChange}
                 />
